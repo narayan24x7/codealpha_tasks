@@ -1,3 +1,120 @@
+Fibonacci Generator
+
+This is a simple Python-based Fibonacci generator that generates Fibonacci numbers either up to a specified number of terms or indefinitely using a generator function.
+
+---
+
+Features
+
+- Fibonacci Sequence: Generates Fibonacci numbers using the mathematical recurrence relation.
+- Customizable Terms: Generate as many terms of the Fibonacci sequence as you need.
+- Generator-Based: Uses Python's generator functionality for efficient and memory-friendly number generation.
+
+---
+
+Prerequisites
+
+Before running the Fibonacci generator, make sure you have the following installed:
+
+- Python 3.x
+
+Installation
+
+To use the Fibonacci generator, simply clone the repository or download the script to your local machine.
+
+```bash
+git clone https://github.com/your-username/fibonacci-generator.git
+cd fibonacci-generator
+```
+
+No additional dependencies are needed for this script as it only relies on standard Python libraries.
+
+---
+
+How to Use
+
+1. Clone the Repository:
+
+   Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/fibonacci-generator.git
+   cd fibonacci-generator
+   ```
+
+2. Run the Script:
+
+   After cloning, open the terminal and run the `fibonacci_generator.py` script:
+
+   ```bash
+   python fibonacci_generator.py
+   ```
+
+3. Example Usage:
+
+   You can modify the script to print the desired number of Fibonacci terms by adjusting the `num_terms` variable.
+
+   ```python
+   num_terms = 10  # Modify the number of terms you want
+   fib = fibonacci_generator(num_terms)
+   for number in fib:
+       print(number)
+   ```
+
+   In this example, the first 10 Fibonacci numbers will be printed.
+
+---
+
+Fibonacci Generator Code Example
+
+```python
+def fibonacci_generator(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+Example usage: Print the first 10 Fibonacci numbers
+num_terms = 10
+fib = fibonacci_generator(num_terms)
+for number in fib:
+    print(number)
+```
+
+Explanation:
+
+- The generator `fibonacci_generator` yields the Fibonacci numbers one by one up to the specified `n` terms.
+- You can adjust `num_terms` to generate as many Fibonacci numbers as you wish.
+
+---
+
+Example Output
+
+```text
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+```
+
+---
+
+Troubleshooting
+
+1. Errors with Python Version:
+   - Ensure you're using Python 3.x to run the script, as older versions may not support certain features used in the code.
+
+2. Running the Script:
+   - Make sure the Python script is located in the correct directory and that your terminal or command prompt is set to that directory.
+
+---
+
 Voice Assistant Project
 
 This is a custom voice assistant built using Python. It leverages various libraries for speech recognition, text-to-speech, and automation tasks like searching Wikipedia, playing YouTube videos, and providing the current time and date. This assistant is a simple implementation but can be extended with additional features and functionalities to make it more intelligent and versatile.
@@ -85,8 +202,3 @@ Feel free to fork this project, submit pull requests, and suggest improvements. 
 License
 
 This project is open-source and available under the MIT License
-Author
-
-[Your Name]  
-[Your GitHub Profile URL]  
-[Your Email Address (optional)]
